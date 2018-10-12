@@ -20,6 +20,22 @@ public class Book {
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
 
+    public Book() {
+    }
+
+    public Book(String title, String isbm, String publisher) {
+        this.title = title;
+        this.isbm = isbm;
+        this.publisher = publisher;
+    }
+
+    public Book(String title, String isbm, String publisher, Set<Author> authors) {
+        this.title = title;
+        this.isbm = isbm;
+        this.publisher = publisher;
+        this.authors = authors;
+    }
+
     public String getTitle() {
         return title;
     }
